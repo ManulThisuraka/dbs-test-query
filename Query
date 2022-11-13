@@ -1,4 +1,15 @@
-Simple nested Loop Join : Cost:  M +  pR * M * N  
-Page oriented : Cost:  M + M*N 
-Block nested loops join : Cost : M +N(M/B-2)
-Index nested loops join : Cost :  M + ( (M*pR) * cost of finding matching S tuples) :: Index(2-4), Hash(1.2)
+Simple nested Loop Join : Cost:  ( M +  pR * M * N  )
+Page oriented : Cost:  ( M + M*N )
+Block nested loops join : Cost : ( M +N(M/B-2) )
+Index nested loops join : Cost :  ( M + ( (M*pR) * cost of finding matching S tuples)) :: Index(2-4), Hash(1.2)
+
+
+Cost = 2N * (Number of passes) : estimate total cost to execute query
+In this sql query having table joining. In here 
+merge table is work. In this table pass data in 
+hard disk to the memory. For this reading and writing
+pages are same. 
+
+Ex : Cost = 2N * (Number of passes)
+        = 3000 * 2 * 2
+        = 12 000 I/O
