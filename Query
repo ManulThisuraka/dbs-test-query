@@ -1,0 +1,4 @@
+Simple nested Loop Join : Cost:  M +  pR * M * N  
+Page oriented : Cost:  M + M*N 
+Block nested loops join : Cost : M +N(M/B-2)
+Index nested loops join : Cost :  M + ( (M*pR) * cost of finding matching S tuples) :: Index(2-4), Hash(1.2)
